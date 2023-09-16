@@ -1,3 +1,3 @@
 module "cos" {
-    source = "../../modules/cos"
+  source = "../../modules/cos"
 }

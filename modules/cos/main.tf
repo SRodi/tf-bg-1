@@ -17,14 +17,14 @@ resource "ibm_cos_bucket" "bucket_test" {
   storage_class        = "standard"
 }
 
-resource "ibm_resource_key" "key_cos_writer" {
-  name                 = "cos-key-writer-test"
-  role                 = "Writer"
+resource "ibm_resource_key" "key_cos_object_writer" {
+  name                 = "cos-key-object-writer-test"
+  role                 = "Object Writer"
   resource_instance_id = ibm_resource_instance.resource_instance_cos_test.id
 }
 
 resource "ibm_resource_key" "key_cos_reader" {
-  name                 = "cos-key-writer-test"
+  name                 = "cos-key-reader-test"
   role                 = "Reader"
   resource_instance_id = ibm_resource_instance.resource_instance_cos_test.id
 }
